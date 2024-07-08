@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const slides = [
@@ -58,7 +59,7 @@ const HeroSection = () => {
             className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
           >
             {slide.type === 'image' ? (
-              <img src={slide.mediaUrl} alt={slide.title} className="w-full h-full object-cover" />
+              <Image src={slide.mediaUrl} alt={slide.title} className="w-full h-full object-cover" />
             ) : (
               <video autoPlay muted loop className="w-full h-full object-cover">
                 <source src={slide.mediaUrl} type="video/mp4" />

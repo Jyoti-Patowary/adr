@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 export default function Services() {
@@ -23,7 +24,7 @@ export default function Services() {
   const ServiceCard = ({ title, description, imageUrl }) => {
     return (
       <div className="flex flex-col p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300">
-        <img className="w-full h-48 object-cover" src={imageUrl} alt="Service Image" />
+        <Image className="w-full h-48 object-cover" src={imageUrl} alt="Service Image" />
         <div className="mt-4 text-center">
           <h3 className="text-xl font-bold">{title}</h3>
           <p className="mt-2 text-gray-600">{description}</p>

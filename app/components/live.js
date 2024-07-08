@@ -50,7 +50,7 @@ const WeAreGoingLiveSoon = () => {
       <h1 className="text-6xl font-comforter mb-4">We Are Going Live Soon</h1>
       <p className="text-2xl mb-8">Our website is almost ready. Stay tuned for the launch!</p>
       <div className="text-3xl">
-        {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+        {timerComponents.length ? timerComponents : <span>Time&apos;s up!</span>}
       </div>
     </div>
   );

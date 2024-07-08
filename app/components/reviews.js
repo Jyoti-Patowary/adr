@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const reviews = [
@@ -45,8 +46,8 @@ const ReviewCarousel = () => {
             className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
           >
             <div className="flex flex-col items-center justify-center h-full bg-white p-6 rounded-xl shadow-md">
-              <img src={review.imageUrl} alt={review.name} className="w-24 h-24 rounded-full mb-4" />
-              <p className="text-lg italic mb-4 text-center">"{review.review}"</p>
+              <Image src={review.imageUrl} alt={review.name} className="w-24 h-24 rounded-full mb-4" />
+              <p className="text-lg italic mb-4 text-center">&quot;{review.review}&quot;</p>
               <h3 className="text-xl font-semibold">{review.name}</h3>
             </div>
           </div>

@@ -15,10 +15,10 @@ const slides = [
   },
   {
     type: 'image',
-    title: 'Unleash Your Adventure',
-    description: 'Ride the best bikes and cars available.',
+    title: 'Two Wheels, Endless Possibilities',
+    description: 'Where the roads meets the soul',
     mediaUrl: 'https://via.placeholder.com/1920x1080',
-    buttonText: 'Book Now',
+    buttonText: 'Rent Now',
     buttonLink: '#',
   },
   {
@@ -59,7 +59,8 @@ const HeroSection = () => {
             className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
           >
             {slide.type === 'image' ? (
-              <Image src={slide.mediaUrl} alt={slide.title} className="w-full h-full object-cover" />
+              // <Image src={slide.mediaUrl} alt={slide.title} className="w-full h-full object-cover" width={100} height={100}/>
+              <img src={slide.mediaUrl} alt={slide.title} className="w-full h-full object-cover"/>
             ) : (
               <video autoPlay muted loop className="w-full h-full object-cover">
                 <source src={slide.mediaUrl} type="video/mp4" />
@@ -67,12 +68,12 @@ const HeroSection = () => {
               </video>
             )}
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white p-6">
-              <h1 className="text-5xl font-bold mb-4">{slide.title}</h1>
-              <h1 className={`text-5xl font-bold mb-4 font-comforter`}>{slide.subtitle}</h1>
-              <p className="text-xl mb-8">{slide.description}</p>
-              <a href={slide.buttonLink} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
+              <h1 className="text-3xl sm:text-6xl md:text-7xl lg:text-9xl font-bold font-comforter pt-11">{slide.title}</h1>
+              {/* <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-7xl font-bold font-comforter pt-2">{slide.subtitle}</h1> */}
+              {/* <p className="hidden md:block text-lg sm:text-xl mb-8">{slide.description}</p> */}
+              {/* <a href={slide.buttonLink} className="hidden md:block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
                 {slide.buttonText}
-              </a>
+              </a> */}
             </div>
           </div>
         ))}

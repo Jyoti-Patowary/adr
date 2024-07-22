@@ -47,11 +47,11 @@ const WeAreGoingLiveSoon = () => {
 
   return (
     <div className="relative w-full h-screen bg-gray-800 text-white flex flex-col items-center justify-center p-6">
-      <h1 className="text-6xl font-comforter mb-4">We Are Going Live Soon</h1>
-      <p className="text-2xl mb-8">Our website is almost ready. Stay tuned for the launch!</p>
-      <div className="text-3xl">
+      <h1 className="text-6xl font-comforter mb-4 sm:text-center md:text-center">We Are Going Live Soon</h1>
+      <p className="text-2xl mb-8 sm:text-center md:text-center" >Our website is almost ready. Stay tuned for the launch!</p>
+      {/* <div className="text-3xl">
         {timerComponents.length ? timerComponents : <span>Time&apos;s up!</span>}
-      </div>
+      </div> */}
     </div>
   );
 };

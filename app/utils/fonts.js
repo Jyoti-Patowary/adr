@@ -1,10 +1,7 @@
-import { Poppins } from "next/font/google";
-import {Comforter} from "next/font/google";
+import { Poppins, Comforter } from "next/font/google";
+
+export const poppins = Poppins({ weight: "400", subsets: ["latin"], display: 'swap', variable: '--font-poppins' });
+export const comforter = Comforter({ weight: "400", subsets: ["latin"], display: 'swap', variable: '--font-comforter' });
 
 
-const poppins_font = Poppins({ weight: '400', subsets: ["latin"] });
-const comforter_font = Comforter({ weight: '400', subsets: ["latin"] });
 
-export const poppins = poppins_font.className;
-
-export const comforter = comforter_font.className;

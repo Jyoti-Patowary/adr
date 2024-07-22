@@ -1,87 +1,82 @@
+
+
 import React from 'react';
+import Image from 'next/image';
 
 export default function CategoriesAndStore() {
   const categoriesData = [
-    {
-      title: 'Bike',
-      imageUrl: 'https://via.placeholder.com/150x100',
-    },
-    {
-      title: 'Car',
-      imageUrl: 'https://via.placeholder.com/150x100',
-    },
-    {
-      title: 'Scooty',
-      imageUrl: 'https://via.placeholder.com/150x100',
-    },
-    // Add more categories as needed
-  ];
-
-  const storeData = [
-    {
-      title: 'Store Item 1',
-      description: 'Description for Store Item 1',
-      imageUrl: 'https://via.placeholder.com/300x150',
-    },
-    {
-      title: 'Store Item 2',
-      description: 'Description for Store Item 2',
-      imageUrl: 'https://via.placeholder.com/300x150',
-    },
-    {
-      title: 'Store Item 3',
-      description: 'Description for Store Item 3',
-      imageUrl: 'https://via.placeholder.com/300x150',
-    },
-    // Add more store items as needed
-  ];
-
-  const CategoryCard = ({ title, imageUrl }) => {
-    return (
-      <div className="flex flex-col p-4 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300">
-        <img className="w-full h-32 object-cover" src={imageUrl} alt={title} />
-        <div className="mt-2 text-center">
-          <h3 className="text-lg font-bold">{title}</h3>
-        </div>
-      </div>
-    );
-  };
-
-  const StoreItem = ({ title, description, imageUrl }) => {
-    return (
-      <div className="flex flex-col p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300">
-        <img className="w-full h-48 object-cover" src={imageUrl} alt={title} />
-        <div className="mt-4 text-center">
-          <h3 className="text-xl font-bold">{title}</h3>
-          <p className="mt-2 text-gray-600">{description}</p>
-        </div>
-      </div>
-    );
-  };
+        {
+          title: 'Cars',
+          amount: 'Rs. 2,499',
+          imageUrl: '/cars/duster.jpg',
+        },
+        {
+          title: 'Bikes',
+          amount: 'Rs. 1,199',
+          imageUrl: '/bikes/jawa42.jpg',
+        },
+        {
+          title: 'Scooty',
+          amount: 'Rs. 550',
+          imageUrl: '/scooty/ntorq.jpg',
+        },
+      ];
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-center mt-6">Categories</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
-        {categoriesData.map((category, index) => (
-          <CategoryCard
-            key={index}
-            title={category.title}
-            imageUrl={category.imageUrl}
-          />
-        ))}
-      </div>
-      
-      <h1 className="text-3xl font-bold text-center mt-6">Store</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
-        {storeData.map((storeItem, index) => (
-          <StoreItem
-            key={index}
-            title={storeItem.title}
-            description={storeItem.description}
-            imageUrl={storeItem.imageUrl}
-          />
-        ))}
+    <div className="py-16 container px-8">
+      <h1 className="text-3xl font-bold text-center pb-16">Our Categories</h1>
+      <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 w-full md:w-1/3 h-full">
+          <div className="relative w-full h-96">
+            <Image
+              src={categoriesData[0].imageUrl}
+              alt={categoriesData[0].title}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+            />
+            <div className="absolute bottom-4 left-4 bg-white p-2 rounded-lg shadow-md">
+              <p className="text-lg font-semibold">{categoriesData[0].title}</p>
+              <p className="text-sm text-gray-600 ">Starts from {categoriesData[0].amount}</p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col w-full md:w-2/3 gap-1">
+          <div className="flex flex-col md:flex-row gap-6">
+            {categoriesData.slice(1).map((category, index) => (
+              <div key={index} className="relative flex flex-col bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 w-full md:w-1/2">
+                <div className="relative w-full h-64 md:h-64">
+                  <Image
+                    src={category.imageUrl}
+                    alt={category.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg"
+                  />
+                </div>
+                <div className="absolute bottom-4 left-4 bg-white p-2 rounded-lg shadow-md">
+                  <p className="text-sm font-bold">{category.title}</p>
+                <p className="text-sm text-gray-600">Starts from {category.amount}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="bg-black text-white p-9 rounded-lg mt-6 flex flex-row items-center justify-between">
+            <div className=''>
+            <h2 className="text-lg font-semibold text-center">
+              We have an accessories store for all vehicles and gears related to vehicles.
+            </h2>
+            </div>
+            <div className=''>
+            <a
+              href="https://your-store-url.com"
+              className="bg-white text-black py-2 px-4 rounded-full hover:bg-yellow-300 font-bold transition duration-300"
+            >
+              Visit Our Store  →
+            </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

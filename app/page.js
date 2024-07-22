@@ -6,16 +6,20 @@ import FAQ from "./components/faq";
 import VehicleListings from "./components/vehicleListing";
 import ReviewCarousel from "./components/reviews";
 import WeAreGoingLiveSoon from "./components/live";
+import AboutSection from "./components/about";
+import Gallery from "./components/lifeAtAdr";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between">
-     {/* <Hero/>
+    <main className="flex flex-col items-center justify-between bg-white">
+      {/* <Hero/>
+     <VehicleListings/>
+     <AboutSection/>
      <Services/>
      <CategoriesAndStore/>
-     <VehicleListings/>
+     <Gallery/>
      <FAQ/>
-     <ReviewCarousel/> */}
+     <ReviewCarousel/>  */}
      <WeAreGoingLiveSoon/>
     </main>
   );

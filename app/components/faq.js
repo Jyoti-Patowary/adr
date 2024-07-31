@@ -35,7 +35,7 @@ const FAQ = () => {
 
   return (
     <div className="container mx-auto p-6" id="faq">
-      <h2 className="text-3xl font-bold text-center mb-6">Frequently Asked Questions</h2>
+      <h2 className="text-6xl font-comforter font-bold text-center mb-6">Frequently Asked Questions</h2>
       <div className="space-y-4">
         {faqData.map((faq, index) => (
           <div key={index} className="bg-white p-4 rounded-xl shadow-md">

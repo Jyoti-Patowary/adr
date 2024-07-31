@@ -64,13 +64,13 @@ const Navbar = () => {
             <div className="hidden md:flex items-center justify-between gap-8">
               <ul className="list-none flex space-x-6 font-medium font-poppins text-white">
                 <li className='hover:text-blue-700'><a href="/">Home</a></li>
-                <li className='hover:text-blue-700'><a href="/vehicles">Rent a Ride</a></li>
+                {/* <li className='hover:text-blue-700'><a href="/vehicles">Rent a Ride</a></li> */}
                 <li className='hover:text-blue-700'><a href="/about">About</a></li>
-                <li className='hover:text-blue-700'><a href="/store">Our Store</a></li>
+                {/* <li className='hover:text-blue-700'><a href="/store">Our Store</a></li> */}
                 <li className='hover:text-blue-700'><a href="/contact">Contact</a></li>
               </ul>
               <div className="flex items-center justify-between gap-2">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-medium font-poppins py-2 px-4 rounded">Login</button>
+                {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-medium font-poppins py-2 px-4 rounded">Login</button> */}
                 {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign Up</button> */}
               </div>
             </div>
@@ -81,12 +81,12 @@ const Navbar = () => {
           <div className="md:hidden bg-yellow-300 dark:bg-gray-800 py-4 min-h-screen h-fix">
             <ul className="list-none flex flex-col items-center space-y-4">
               <li><a href="/home">Home</a></li>
-              <li><a href="/rent">Rent a Ride</a></li>
+              {/* <li><a href="/rent">Rent a Ride</a></li> */}
               <li><a href="/about">About</a></li>
-              <li><a href="/store">Our Store</a></li>
+              {/* <li><a href="/store">Our Store</a></li> */}
               <li><a href="/contact">Contact</a></li>
               <div className="flex items-center justify-between gap-2">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
+                {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button> */}
                 {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign Up</button> */}
               </div>
             </ul>

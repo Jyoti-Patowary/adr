@@ -9,7 +9,7 @@ export default function Gallery() {
         <div>
           <Image
             className="h-auto max-w-full rounded-lg"
-            src="/cars/duster.jpg"
+            src="/cars/i10.jpg"
             alt="Image 1"
             width={500}
             height={800}
@@ -29,7 +29,7 @@ export default function Gallery() {
         <div className="flex flex-col justify-end">
           <Image
             className="h-40 max-w-full rounded-lg object-cover"
-            src="/cars/i10.webp"
+            src="/cars/i20.webp"
             alt="Image 4"
             width={500}
             height={500}
@@ -38,7 +38,7 @@ export default function Gallery() {
         <div>
           <Image
             className="h-40 max-w-full rounded-lg object-cover"
-            src="/cars/duster.jpg"
+            src="/cars/k10.webp"
             alt="Image 5"
             width={500}
             height={500}
@@ -49,7 +49,7 @@ export default function Gallery() {
         <div>
           <Image
             className="h-auto max-w-full rounded-lg"
-            src="/cars/duster.jpg"
+            src="/bikes/classic350.jpg"
             alt="Image 7"
             width={500}
             height={500}
@@ -58,7 +58,7 @@ export default function Gallery() {
         <div>
           <Image
             className="h-auto max-w-full rounded-lg"
-            src="/cars/duster.jpg"
+            src="/bikes/jawa42.jpg"
             alt="Image 8"
             width={500}
             height={500}

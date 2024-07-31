@@ -10,15 +10,13 @@ export default function Contact() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="w-full lg:w-1/2">
             <div className="mb-8 lg:mb-0">
-              <h1 className="text-3xl lg:text-5xl font-bold mb-4">Contact Us</h1>
+              <h1 className="text-3xl lg:text-6xl font-bold font-comforter mb-4">Contact Us</h1>
               <p className="text-lg mb-2">
-                Email, call, or complete the form to learn how Snappy can solve your messaging problem.
+                Email, call, or complete the form to learn how ADR can assist you.
               </p>
-              <p className="mb-4">alldayride6@gmil.com</p>
-              <p className="mb-4">321-221-231</p>
-              <a href="#" className="text-blue-500 underline mb-8 inline-block">
-                Customer Support
-              </a>
+              <p className="mb-4">alldayride6@gmail.com</p>
+              <p className="mb-4">+91 99549 15939</p>
+              <p className="mb-4">Geetanagar, Opp. BSF Camp, Guwahati, Assam</p>
               <div className="space-y-6">
                 <div>
                   <h3 className="font-bold mb-2">Customer Support</h3>
@@ -29,13 +27,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold mb-2">Feedback and Suggestions</h3>
                   <p className="mb-4">
-                    We value your feedback and are continuously working to improve Snappy. Your input is crucial in shaping the future of Snappy.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold mb-2">Media Inquiries</h3>
-                  <p>
-                    For media-related questions or press inquiries, please contact us at media@snappyapp.com.
+                    At ADR, we’re always working to improve our services. Your feedback helps us shape the future and ensure we’re meeting your needs effectively.
                   </p>
                 </div>
               </div>

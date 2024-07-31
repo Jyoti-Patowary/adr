@@ -12,15 +12,15 @@ import Gallery from "./components/lifeAtAdr";
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between bg-white">
-      {/* <Hero/>
+     <Hero/>
      <VehicleListings/>
      <AboutSection/>
      <Services/>
      <CategoriesAndStore/>
      <Gallery/>
      <FAQ/>
-     <ReviewCarousel/>  */}
-     <WeAreGoingLiveSoon/>
+     <ReviewCarousel/> 
+     {/* <WeAreGoingLiveSoon/> */}
     </main>
   );
 }

@@ -43,7 +43,7 @@ export default function Services() {
   return (
     <div className="bg-black w-full flex items-center justify-center">
       <div className='py-16 container'>
-      <h1 className="text-3xl font-bold text-center text-white mb-8">Why Choose ADR Rentals?</h1>
+      <h1 className="text-6xl font-bold font-comforter text-center text-white mb-8">Why Choose ADR Rentals?</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6 pt-9">
         {servicesData.map((service, index) => (
           <ServiceCard

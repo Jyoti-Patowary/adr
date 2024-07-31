@@ -1,66 +1,47 @@
-import connectToDatabase from '../../lib/db';
+import { NextResponse } from 'next/server';
+import createConnection from '../../lib/db'; // Adjust the path if necessary
 
-export async function GET(req) {
-  console.log('Received GET request');
-  
+export async function GET(request) {
+  const { searchParams } = new URL(request.url);
+  const filter = searchParams.get('filter') || 'All';
+
   try {
-    const db = await connectToDatabase();
-    
-    // Log the database connection object (limited information)
-    console.log('Database connection object:', db);
+    // Establish a connection to MongoDB
+    const connection = await createConnection();
+    const db = connection.connection.db;
 
-    // Extract the query parameter
-    const { searchParams } = new URL(req.url, `http://${req.headers.host}`);
-    const vehicleType = searchParams.get('vehicleType');
-    
-    console.log('Query parameter vehicleType:', vehicleType);
-
-    let vehicles = [];
-
-    if (vehicleType) {
-      // Map vehicleType to the corresponding collection
-      const collection = {
-        bike: "bikes",
-        car: "cars",
-        scooter: "scooters"
-      }[vehicleType];
-      
-      console.log('Using collection:', collection);
-
-      if (!collection) {
-        console.warn('Invalid vehicle type:', vehicleType);
-        return new Response(JSON.stringify({ message: "Invalid vehicle type" }), { status: 400 });
-      }
-      
-      // Fetch data from the specified collection
-      console.log('Fetching data from collection:', collection);
-      vehicles = await db.collection(collection).find({}).toArray();
-    } else {
-      // Fetch data from all collections if vehicleType is not specified
-      console.log('Fetching data from all collections');
-      const collections = ['bikes', 'cars', 'scooters'];
-      
-      const promises = collections.map(async (col) => {
-        const data = await db.collection(col).find({}).toArray();
-        return { collection: col, data };
-      });
-      
-      const results = await Promise.all(promises);
-      
-      // Merge results from all collections
-      vehicles = results.reduce((acc, { collection, data }) => {
-        acc[collection] = data;
-        return acc;
-      }, {});
+    // Determine the collection to query based on the filter
+    let collectionName;
+    switch (filter) {
+      case 'Cars':
+        collectionName = 'cars';
+        break;
+      case 'Bikes':
+        collectionName = 'bikes';
+        break;
+      case 'Scooters':
+        collectionName = 'scooters';
+        break;
+      default:
+        collectionName = ['cars', 'bikes', 'scooters'];
     }
 
-    // Log the fetched vehicles
-    console.log('Fetched vehicles:', vehicles);
-    
-    // Return the fetched vehicles
-    return new Response(JSON.stringify(vehicles), { status: 200 });
+    // Fetch data from the appropriate collection(s)
+    let vehicles = [];
+    if (Array.isArray(collectionName)) {
+      for (const name of collectionName) {
+        const collection = db.collection(name);
+        const data = await collection.find({}).toArray();
+        vehicles = vehicles.concat(data);
+      }
+    } else {
+      const collection = db.collection(collectionName);
+      vehicles = await collection.find({}).toArray();
+    }
+
+    return NextResponse.json(vehicles);
   } catch (error) {
-    console.error('Error handling GET request:', error);
-    return new Response(JSON.stringify({ message: 'Internal Server Error', error: error.message }), { status: 500 });
+    console.error('Error fetching vehicles:', error);
+    return NextResponse.json({ error: 'Failed to fetch vehicles' }, { status: 500 });
   }
 }

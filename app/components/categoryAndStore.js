@@ -2,29 +2,30 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function CategoriesAndStore() {
   const categoriesData = [
         {
           title: 'Cars',
-          amount: 'Rs. 2,499',
+          amount: 'Rs. 1,799',
           imageUrl: '/cars/duster.jpg',
         },
         {
           title: 'Bikes',
-          amount: 'Rs. 1,199',
+          amount: 'Rs. 799',
           imageUrl: '/bikes/jawa42.jpg',
         },
         {
           title: 'Scooty',
-          amount: 'Rs. 550',
+          amount: 'Rs. 449',
           imageUrl: '/scooty/ntorq.jpg',
         },
       ];
 
   return (
     <div className="py-16 container px-8">
-      <h1 className="text-3xl font-bold text-center pb-16">Our Categories</h1>
+      <h1 className="text-6xl font-bold font-comforter text-center pb-16">Our Categories</h1>
       <div className="flex flex-col md:flex-row gap-6">
         <div className="flex flex-col bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 w-full md:w-1/3 h-full">
           <div className="relative w-full h-96">
@@ -68,12 +69,12 @@ export default function CategoriesAndStore() {
             </h2>
             </div>
             <div className=''>
-            <a
+            <Link
               href="https://your-store-url.com"
               className="bg-white text-black py-2 px-4 rounded-full hover:bg-yellow-300 font-bold transition duration-300"
             >
               Visit Our Store  →
-            </a>
+            </Link>
             </div>
           </div>
         </div>

@@ -140,7 +140,7 @@ export default function VehicleListings() {
           </div>
 
           <div className="text-center pt-4">
-            <Link href="/vehicles" className="bg-black text-white py-3 px-6 rounded-full hover:bg-gray-800 transition duration-300">
+            <Link href="/" className="bg-black text-white py-3 px-6 rounded-full hover:bg-gray-800 transition duration-300">
               View All Vehicles →
             </Link>
           </div>

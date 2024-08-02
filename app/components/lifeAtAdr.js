@@ -1,10 +1,12 @@
 // pages/index.js
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Gallery() {
   return (
-    <div className="container py-10 px-9 grid grid-cols-2 md:grid-cols-4 gap-4">
-         <h1 className="text-5xl font-bold text-left flex justify-center items-center px-16 h-auto bg-yellow-300 rounded-lg text-white">Life with ADR Rentals</h1>
+    <div className="container py-10 px-4 md:px-9 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <h1 className="text-2xl md:text-5xl font-bold text-left flex justify-center items-center px-16 h-auto bg-yellow-300 rounded-lg text-white">
+        Life with ADR Rentals
+      </h1>
       <div className="grid gap-4">
         <div>
           <Image
@@ -48,16 +50,17 @@ export default function Gallery() {
       <div className="grid gap-4">
         <div>
           <Image
-            className="h-auto max-w-full rounded-lg"
+            className="h-40 md:h-full max-w-full rounded-lg"
             src="/bikes/classic350.jpg"
             alt="Image 7"
             width={500}
             height={500}
+            objectFit="contain" 
           />
         </div>
         <div>
           <Image
-            className="h-auto max-w-full rounded-lg"
+            className="h-40 md:h-full max-w-full object-cover rounded-lg"
             src="/bikes/jawa42.jpg"
             alt="Image 8"
             width={500}

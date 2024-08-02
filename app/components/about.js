@@ -32,22 +32,22 @@ const AboutSection = () => {
           style={{ height: "300px", objectFit: "cover" }}
         />
         <div className="absolute bottom-4 left-4 space-y-2 md:space-y-4">
-          <div className="flex items-center bg-black text-white py-1 px-2 md:py-2 md:px-4 rounded-full">
+          <div className="flex items-center bg-black text-white py-1 px-5 md:py-2 md:px-4 rounded-full">
             <span className="mr-1 md:mr-2">✔️</span>
-            <span className="text-xs md:text-sm">Experience Top Performance and Comfort</span>
+            <span className="text-xs md:text-lg">Experience Top Performance and Comfort</span>
           </div>
-          <div className="flex items-center bg-black text-white py-1 px-2 md:py-2 md:px-4 rounded-full translate-x-4 md:translate-x-8">
+          <div className="flex items-center bg-black text-white py-1 px-2 md:py-2 md:px-4 rounded-full md:translate-x-10 ">
             <span className="mr-1 md:mr-2">✔️</span>
-            <span className="text-xs md:text-sm">Explore More with Every Journey</span>
+            <span className="text-xs md:text-lg">Explore More with Every Journey</span>
           </div>
-          <div className="flex items-center bg-black text-white py-1 px-2 md:py-2 md:px-4 rounded-full translate-x-8 md:translate-x-16">
+          <div className="flex items-center bg-black text-white py-1 px-2 md:py-2 md:px-4 rounded-full md:translate-x-20">
             <span className="mr-1 md:mr-2">✔️</span>
-            <span className="text-xs md:text-sm">Not Just a Rental—An Adventure</span>
+            <span className="text-xs md:text-lg">Not Just a Rental—An Adventure</span>
           </div>
         </div>
       </div>
       <div className="md:w-1/2 md:pl-6">
-        <h2 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 font-comforter">About Us</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 font-poppins">About Us</h2>
         <h1 className="text-2xl md:text-5xl font-bold mb-4 leading-tight">
           Adventure & Freedom with <span className="text-yellow-300">ADR {currentWord} Rentals</span>
         </h1>

@@ -8,6 +8,7 @@ import ReviewCarousel from "./components/reviews";
 import WeAreGoingLiveSoon from "./components/live";
 import AboutSection from "./components/about";
 import Gallery from "./components/lifeAtAdr";
+import ContactForm from "./components/contactForm";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
      <Gallery/>
      <FAQ/>
      <ReviewCarousel/> 
+     {/* <ContactForm/> */}
      {/* <WeAreGoingLiveSoon/> */}
     </main>
   );

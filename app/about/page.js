@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import ReviewCarousel from '../components/reviews';
+import FAQ from '../components/faq';
 
 export default function AboutPage() {
   return (
@@ -78,6 +79,7 @@ export default function AboutPage() {
             </motion.div>
           </div>
         </section>
+        <FAQ/>
         <ReviewCarousel/>
       </div>
     </div>

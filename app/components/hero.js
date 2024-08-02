@@ -51,7 +51,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-96 md:h-[75vh] lg:h-[80vh] overflow-hidden">
       <div className="relative h-full">
         {slides.map((slide, index) => (
           <div
@@ -68,7 +68,7 @@ const HeroSection = () => {
               </video>
             )}
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white p-6">
-              <h1 className="text-3xl sm:text-6xl md:text-7xl lg:text-9xl font-bold font-comforter pt-11">{slide.title}</h1>
+              <h1 className="text-6xl sm:text-6xl md:text-8xl lg:text-9xl font-bold font-comforter pt-11 sm:leading-9 md:leading-loose">{slide.title}</h1>
               {/* <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-7xl font-bold font-comforter pt-2">{slide.subtitle}</h1> */}
               {/* <p className="hidden md:block text-lg sm:text-xl mb-8">{slide.description}</p> */}
               {/* <a href={slide.buttonLink} className="hidden md:block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
@@ -78,7 +78,7 @@ const HeroSection = () => {
           </div>
         ))}
       </div>
-      <button
+      {/* <button
         className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-4 py-2"
         onClick={prevSlide}
       >
@@ -89,7 +89,7 @@ const HeroSection = () => {
         onClick={nextSlide}
       >
         &gt;
-      </button>
+      </button> */}
       <div className="absolute bottom-0 left-0 right-0 flex justify-center p-4">
         {slides.map((_, index) => (
           <button

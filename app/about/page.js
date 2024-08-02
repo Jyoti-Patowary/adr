@@ -28,7 +28,7 @@ export default function AboutPage() {
         </section>
 
         {/* Team Section */}
-        <section className='mb-12'>
+        {/* <section className='mb-12'>
           <h2 className="text-3xl font-semibold mb-8">Meet the Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
      
@@ -78,10 +78,10 @@ export default function AboutPage() {
               </div>
             </motion.div>
           </div>
-        </section>
+        </section> */}
+      </div>
         <FAQ/>
         <ReviewCarousel/>
-      </div>
     </div>
   );
 }

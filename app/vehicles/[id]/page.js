@@ -5,7 +5,7 @@ import FAQ from '../../components/faq';
 
 async function fetchVehicle(id) {
   try {
-    const response = await fetch('http://localhost:3000/api/vehicles');
+    const response = await fetch('http://alldayride.in/api/vehicles');
     if (!response.ok) throw new Error('Network response was not ok');
     const vehicles = await response.json();
     return vehicles.find(vehicle => vehicle._id === id);

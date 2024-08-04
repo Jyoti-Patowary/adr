@@ -7,14 +7,16 @@ export default function VehicleDetailsClient({ vehicle }) {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
 
-  const phoneNumber = window.navigator.userAgent.match(/Mobi/) 
-  ? '9954915939'  // phone number without country code for mobile
-  : '919954915939';  // phone number with country code for other devices
-
-const whatsappLink = `https://wa.me/${phoneNumber}?text=Hi%20I%27m%20interested%20in%20the%20${encodeURIComponent(vehicle.brand)}%20${encodeURIComponent(vehicle.model)}.%20Booking%20Dates%3A%20From%20${encodeURIComponent(startDate)}%20To%20${encodeURIComponent(endDate)}.%20Please%20confirm%20availability.%20Thank%20you!`;
-
-window.open(whatsappLink, '_blank');
-
+  const handleBookNow = () => {
+    const phoneNumber = window.navigator.userAgent.match(/Mobi/) 
+    ? '9954915939'  // phone number without country code for mobile
+    : '919954915939';  // phone number with country code for other devices
+  
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=Hi%20I%27m%20interested%20in%20the%20${encodeURIComponent(vehicle.brand)}%20${encodeURIComponent(vehicle.model)}.%20Booking%20Dates%3A%20From%20${encodeURIComponent(startDate)}%20To%20${encodeURIComponent(endDate)}.%20Please%20confirm%20availability.%20Thank%20you!`;
+  
+  window.open(whatsappLink, '_blank');
+  
+  };
   
 
   return (

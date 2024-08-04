@@ -26,6 +26,8 @@ export default function VehicleListings() {
     fetchVehicles();
   }, [filter]);
 
+  console.log('Vehicle', vehicles._id)
+
   const isVehiclesPage = router.pathname === '/vehicles';
   const displayedVehicles = isVehiclesPage ? vehicles : vehicles.slice(0, 9);
 
@@ -47,7 +49,10 @@ export default function VehicleListings() {
             </div>
 
             <div className="text-center">
-              <Link href="/all-vehicles" className="block px-4 py-2 text-lg font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+              <Link
+                href="/all-vehicles"
+                className="block px-4 py-2 text-lg font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+              >
                 View All Vehicles
               </Link>
             </div>
@@ -57,8 +62,9 @@ export default function VehicleListings() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
               {displayedVehicles.length > 0 ? (
                 displayedVehicles.map(vehicle => (
-                  <div
+                  <Link
                     key={vehicle._id}
+                    href={`/vehicles/${vehicle._id}`}
                     className="relative rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
                   >
                     <div className="relative h-48 w-full">
@@ -66,8 +72,9 @@ export default function VehicleListings() {
                         src={vehicle.imageUrl || '/placeholder.jpg'}
                         alt={`${vehicle.brand} ${vehicle.model}`}
                         layout="fill"
-                        objectFit="cover"
+                        style={{ objectFit: 'cover' }} // Use style prop
                         className="rounded-t-lg"
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                       />
                     </div>
                     <div className="p-4 bg-white">
@@ -80,7 +87,7 @@ export default function VehicleListings() {
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))
               ) : (
                 <p className="text-gray-500 text-center col-span-full">No vehicles available</p>
@@ -109,8 +116,9 @@ export default function VehicleListings() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
             {displayedVehicles.length > 0 ? (
               displayedVehicles.map(vehicle => (
-                <div
+                <Link
                   key={vehicle._id}
+                  href={`/vehicles/${vehicle._id}`}
                   className="relative rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
                 >
                   <div className="relative h-48 w-full">
@@ -118,8 +126,9 @@ export default function VehicleListings() {
                       src={vehicle.imageUrl || '/placeholder.jpg'}
                       alt={`${vehicle.brand} ${vehicle.model}`}
                       layout="fill"
-                      objectFit="cover"
+                      style={{ objectFit: 'cover' }} 
                       className="rounded-t-lg"
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                     />
                   </div>
                   <div className="p-4 bg-white">
@@ -132,7 +141,7 @@ export default function VehicleListings() {
                       </span>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))
             ) : (
               <p className="text-gray-500 text-center col-span-full">No vehicles available</p>
@@ -140,7 +149,10 @@ export default function VehicleListings() {
           </div>
 
           <div className="text-center pt-4">
-            <Link href="/" className="bg-black text-white py-3 px-6 rounded-full hover:bg-gray-800 transition duration-300">
+            <Link
+              href="/"
+              className="bg-black text-white py-3 px-6 rounded-full hover:bg-gray-800 transition duration-300"
+            >
               View All Vehicles →
             </Link>
           </div>

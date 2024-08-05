@@ -13,14 +13,14 @@ const slides = [
     buttonText: 'Ride Now',
     buttonLink: '#',
   },
-  // {
-  //   type: 'image',
-  //   title: 'Two Wheels, Endless Possibilities',
-  //   description: 'Where the roads meets the soul',
-  //   mediaUrl: 'https://via.placeholder.com/1920x1080',
-  //   buttonText: 'Rent Now',
-  //   buttonLink: '#',
-  // },
+  {
+    type: 'image',
+    title: 'Two Wheels, Endless Possibilities',
+    description: 'Where the roads meets the soul',
+    mediaUrl: '/hero2.jpg',
+    buttonText: 'Rent Now',
+    buttonLink: '#',
+  },
   // {
   //   type: 'image',
   //   title: 'Discover New Horizons',

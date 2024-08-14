@@ -24,7 +24,7 @@ const AboutSection = () => {
       <div className="md:w-1/2 relative mb-6 md:mb-0">
         <Image
           src="/duster.jpg" 
-          alt="Business Meeting"
+          alt="Renault Duster"
           layout="responsive"
           width={500}
           height={900}

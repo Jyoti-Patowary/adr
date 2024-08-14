@@ -36,7 +36,7 @@ const Navbar = () => {
                 <li className='hover:text-blue-700'><a href="/">Home</a></li>
                 {/* <li className='hover:text-blue-700'><a href="/vehicles">Rent a Ride</a></li> */}
                 <li className='hover:text-blue-700'><a href="/about">About</a></li>
-                {/* <li className='hover:text-blue-700'><a href="/store">Our Store</a></li> */}
+                {/* <li className='hover:text-blue-700'><a href="/partner-with-adr">Partner With ADR</a></li> */}
                 <li className='hover:text-blue-700'><a href="/contact">Contact</a></li>
               </ul>
             </div>

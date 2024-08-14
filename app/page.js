@@ -9,11 +9,13 @@ import WeAreGoingLiveSoon from "./components/live";
 import AboutSection from "./components/about";
 import Gallery from "./components/lifeAtAdr";
 import ContactForm from "./components/contactForm";
+import ServicesCard from './components/services'
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between bg-white">
      <Hero/>
+     {/* <ServicesCard/> */}
      <VehicleListings/>
      <AboutSection/>
      <Services/>
